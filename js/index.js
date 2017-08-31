@@ -1,5 +1,5 @@
 
-//音乐播放开始
+
 (function () {
     var music = document.getElementById("music");
     var playmusic = document.getElementById("playmusic");
@@ -55,10 +55,10 @@
         }
     }
 }())
-//音乐播放结束
 
 
-// 学忠开始
+
+
 var juese = document.getElementById("juese");
 var cxzLeftBox = juese.children[0].children[0].children[1];
 var cxzLeftBoxUl = cxzLeftBox.children[0];
@@ -231,10 +231,10 @@ function cxzMoveIn() {
 }
 cxzMoveIn();
 
-//学忠结束
 
-// 肖娟开始
-//轮播部分
+
+
+
 var xj_bigBox = document.getElementById("xj_bigBox");
 
 var xj_lunbo = document.getElementById("xj_lunbo");
@@ -263,7 +263,7 @@ for (var i = 0; i < xj_ollis.length; i++) {
         }
         this.setAttribute("class", "current");
         var target = -this.getAttribute("index") * imgWidth;
-        // console.log(target);
+        
         animate(xj_ul, { "left": target });
         picIndex = spanIndex = this.getAttribute("index");
     }
@@ -278,7 +278,7 @@ xj_bigBox.onmouseout = function () {
 }
 var picIndex = 0;
 
-// xj_ul.appendChild(xj_ullis[0].cloneNode(true));
+
 
 var spanIndex = 0;
 
@@ -307,7 +307,7 @@ function nextImg() {
     xj_ollis[spanIndex].setAttribute("class", "current");
 
 }
-//轮播左边充值部分
+
 
 var xj_gameDown = document.getElementById("xj_gameDown");
 
@@ -338,8 +338,8 @@ xj_chongZhi.onmouseover = function () {
 xj_chongZhi.onmouseout = function () {
     this.setAttribute("class", "xj_chongzhi");
 }
-// 肖娟结束
-// 覃青云开始
+
+
 $('.qqy_newsTitle a').on('mouseover', function () {
 
     $(this).parent().siblings().children().removeClass('current');
@@ -347,18 +347,18 @@ $('.qqy_newsTitle a').on('mouseover', function () {
     $(this).addClass('current');
 
 
-    //ul跟随移动 获取被点击的index 移动
+    
 
 
     $('#qyy_newsContent ul').stop().animate({
         left: -$('#qyy_newsContent').width() * $(this).parent().index()
     })
 })
-// 覃青云结束
 
 
 
-// 肖尉开始
+
+
 $(function () {
     $('.trzMenu>ul>li').on('click', function () {
         $('.trzMenu>ul>li').children().children('span').css('backgroundPosition-y', '1px');
@@ -369,10 +369,10 @@ $(function () {
         $('.slideBox').children().eq($(this).index()).show(300);
     })
 })
-// 肖尉结束
 
-// 赵杰开始
-//����table����¼�
+
+
+
 var hot = document.getElementsByClassName("zj-title")[0].children;
 var nb = document.getElementsByClassName("zj-nb")[0];
 hot[0].onclick = function () {
@@ -388,10 +388,10 @@ hot[1].onclick = function () {
     this.previousElementSibling.setAttribute('class', 'title-one');
 }
 
-//�Ӻ�+������������¼�
+
 var add = document.getElementsByClassName("add");
 
-//���ü�ʱ��
+
 
 var overID = null;
 var outID = null;
@@ -419,7 +419,7 @@ for (var i = 0; i < add.length; i++) {
 
         add[i].onmouseout = function () {
             clearInterval(overID);
-            ////��ȡ�����ӿ��
+            
             var boxwidth = this.offsetWidth;
             outID = setInterval(function () {
 
@@ -437,9 +437,9 @@ for (var i = 0; i < add.length; i++) {
         }
     })(i)
 }
-// 赵杰结束
 
-// 郑威开始
+
+
 /*郑威   模块8  js*/
 (function () {
     var service = document.getElementById("service");
@@ -530,7 +530,7 @@ for (var i = 0; i < add.length; i++) {
     }
 
 
-    //中间
+    
     var other_zw = document.getElementById("other_zw");
     var other_ul1 = other_zw.children[0];
     var othernews = other_zw.children[2];
@@ -572,7 +572,7 @@ for (var i = 0; i < add.length; i++) {
         }
     }
 
-    //中间下方news轮播
+    
     var timer2 = null;
     var picIndex = 0;
     timer2 = setInterval(nextImg, 2000);
@@ -600,7 +600,7 @@ for (var i = 0; i < add.length; i++) {
     }
 
 
-    //合作广告轮播
+    
     var partnerAd_zw = document.getElementById("partnerAd_zw");
     var adUl_zw = partnerAd_zw.children;
     var adHeight = adUl_zw[0].offsetHeight;
@@ -631,4 +631,3 @@ for (var i = 0; i < add.length; i++) {
 }())
 
 
-// 郑威结束
